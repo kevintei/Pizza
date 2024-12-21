@@ -1,6 +1,6 @@
-crusts = {"thin", "deepdish", "hand_tossed"}
-toppings = {"cheese", "sausage", "black_olive"}
-meats = {"sausage"}
+crusts = {"thin", "deepdish", "hand_tossed", "stuffed"}
+toppings = {"cheese", "sausage", "black_olive", "pepperoni"}
+meats = {"sausage", "pepperoni"}
 
 prices = {
     "thin": 8.0,
@@ -9,6 +9,8 @@ prices = {
     "cheese": 1.0,
     "sausage": 1.5,
     "black_olive": 1.0,
+    "stuffed": 8.0,
+    "pepperoni": 4.0,
 }
 
 
@@ -47,5 +49,10 @@ def calculate_price(pizza):
 
 def remove_topping(pizza, topping):
     the_toppings = get_toppings(pizza)
-    if topping in the_toppings:
+    while topping in the_toppings:
         the_toppings.remove(topping)
+
+
+def is_dairy_free(pizza):
+    the_toppings = get_toppings(pizza)
+    return not ("cheese" in the_toppings)
