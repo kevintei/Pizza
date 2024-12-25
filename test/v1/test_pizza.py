@@ -13,17 +13,17 @@ def test_pizza_invalid_topping_paper():
         pizza.add_topping("paper")
 
 
-def test_pizza_is_veggetarian_simple_crust():
+def test_pizza_is_vegetarian_simple_crust():
     pizza = p.make_pizza("deepdish")
-    assert p.is_veggetarian(pizza)
+    assert p.is_vegetarian(pizza)
     assert p.calculate_price() == 8.0
 
 
-def test_pizza_is_veggetarian_simple_crust():
+def test_pizza_is_vegetarian_simple_crust():
     pizza = p.make_pizza("deepdish")
     p.add_topping(pizza, "black_olive")
     p.add_topping(pizza, "cheese")
-    assert p.is_veggetarian(pizza)
+    assert p.is_vegetarian(pizza)
 
 
 def test_pizza_cost_cheese():
@@ -39,7 +39,7 @@ def test_pizza_cost_stuffed_special():
     p.add_topping(pizza, "cheese")
     p.add_topping(pizza, "pepperoni")
     p.add_topping(pizza, "cheese")
-    assert not p.is_veggetarian(pizza)
+    assert not p.is_vegetarian(pizza)
     assert p.calculate_price(pizza) == 14.0
 
 
@@ -50,7 +50,7 @@ def test_pizza_remove_toppings():
     p.add_topping(pizza, "pepperoni")
     p.add_topping(pizza, "cheese")
     p.remove_topping(pizza, "pepperoni")
-    assert p.is_veggetarian(pizza)
+    assert p.is_vegetarian(pizza)
     assert p.calculate_price(pizza) == 9.0
 
 

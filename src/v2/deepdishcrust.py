@@ -1,7 +1,8 @@
 from src.v2.pizza import Pizza
 
 
-class ThinCrust(Pizza):
+class DeepDishCrust(Pizza):
+
     def is_vegetarian(self):
         return True
 
