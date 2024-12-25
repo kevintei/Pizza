@@ -1,12 +1,12 @@
 from src.v2.pizza import Pizza
 
 
-class ThinCrust(Pizza):
+class StuffedCrust(Pizza):
     def is_vegetarian(self):
         return True
 
     def calculate_price(self):
         return 8.0
 
-    def is_dairy_free(self):
-        return True
+    def remove_topping(self, topping_class):
+        return self
